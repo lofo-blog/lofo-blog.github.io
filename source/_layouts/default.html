@@ -6,6 +6,7 @@
   <div id="main">
     <div id="content">
       {{ content | expand_urls: root_url }}
+      {% include custom/totop.html %} 
     </div>
   </div>
   <footer role="contentinfo">{% include footer.html %}</footer>
