@@ -4,7 +4,7 @@
   <title><![CDATA[L.O.F.O]]></title>
   <link href="http://lofo-blog.github.io/atom.xml" rel="self"/>
   <link href="http://lofo-blog.github.io/"/>
-  <updated>2015-06-03T11:25:03-05:00</updated>
+  <updated>2015-06-03T11:32:50-05:00</updated>
   <id>http://lofo-blog.github.io/</id>
   <author>
     <name><![CDATA[Linfeng Zhang]]></name>
@@ -20,7 +20,10 @@
     <id>http://lofo-blog.github.io/blog/awesome-social-icon-hover-effect</id>
     <content type="html"><![CDATA[<p>In this tutorial, we take a look at creating one beautiful, yet simple, icon hover effects using CSS3 transitions and transforms.</p>
 
-<p>Icons. They exist everywhere, in all our apps and websites these days, and they all perform important functions. They guide users into various interactions, or send them to external links such as various social media platforms. Icon sprites are commonplace and important from a development standpoint, and allow us to engage users a bit with hover classes. These hover classes have the potential to add a neat layer of interactivity and style to our apps/sites.<!--more--> In this tutorial, I&rsquo;m going to guide you through one icon hover states, each utilizing CSS3 transitions and transforms, engaging the end users a bit more, and possibly leading to higher click-through rates.</p>
+<p>Icons. They exist everywhere, in all our apps and websites these days, and they all perform important functions. They guide users into various interactions, or send them to external links such as various social media platforms. Icon sprites are commonplace and important from a development standpoint, and allow us to engage users a bit with hover classes. These hover classes have the potential to add a neat layer of interactivity and style to our apps/sites. In this tutorial, I&rsquo;m going to guide you through one icon hover states, each utilizing CSS3 transitions and transforms, engaging the end users a bit more, and possibly leading to higher click-through rates.</p>
+
+<!--more-->
+
 
 <h2>Making Up Icons?</h2>
 
