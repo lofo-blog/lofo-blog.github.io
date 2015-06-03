@@ -1,0 +1,300 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>3D Text Effect - L.O.F.O</title>
+  <meta name="author" content="Linfeng Zhang">
+
+  
+  <meta name="description" content="Use multiple text-shadows to create 3D text on any HTML element.No extra HTML, no extra headaches, just awesomesauce. Works in the latest builds of &hellip;">
+  <meta name="keywords" content="css, text effect, 3d">
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://lofo-blog.github.io/blog/3d-text-effect/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="L.O.F.O" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">L.O.F.O</a></h1>
+  
+    <h2>Just Another Code Monkey</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="sitesearch" value="lofo-blog.github.io">
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">3D Text Effect</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2015-06-03T12:06:41-05:00'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>3</span><span class='date-suffix'>rd</span>, <span class='date-year'>2015</span></span> <span class='time'>12:06 pm</span></time>
+        
+           | <a href="#disqus_thread"
+             data-disqus-identifier="http://lofo-blog.github.io">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Use multiple text-shadows to create 3D text on any HTML element.No extra HTML, no extra headaches, just awesomesauce.</p>
+
+<h4>Works in the latest builds of Safari, Chrome, Firefox, and Opera.</h4>
+
+<!--more-->
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>h1 {
+</span><span class='line'>  text-shadow: 0 1px 0 #ccc,
+</span><span class='line'>               0 2px 0 #c9c9c9,
+</span><span class='line'>               0 3px 0 #bbb,
+</span><span class='line'>               0 4px 0 #b9b9b9,
+</span><span class='line'>               0 5px 0 #aaa,
+</span><span class='line'>               0 6px 1px rgba(0,0,0,.1),
+</span><span class='line'>               0 0 5px rgba(0,0,0,.1),
+</span><span class='line'>               0 1px 3px rgba(0,0,0,.3),
+</span><span class='line'>               0 3px 5px rgba(0,0,0,.2),
+</span><span class='line'>               0 5px 10px rgba(0,0,0,.25),
+</span><span class='line'>               0 10px 10px rgba(0,0,0,.2),
+</span><span class='line'>               0 20px 20px rgba(0,0,0,.15);
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Check the effect blow:</p>
+
+<p><img src="/images/3d.jpg"/></p>
+
+<p><a style="background-color:#44c767;
+     -moz-border-radius:28px;
+     -webkit-border-radius:28px;
+     border-radius:28px;
+     border:1px solid #18ab29;
+     display:inline-block;
+     cursor:pointer;
+     color:#ffffff;
+     font-family:Arial;
+     font-size:17px;
+     padding:16px 31px;
+     text-decoration:none;
+     text-shadow:0px 1px 0px #2f6627;"href="http://markdotto.com/playground/3d-text/" class="myButton">DOMO</a></p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Linfeng Zhang</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2015-06-03T12:06:41-05:00'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>3</span><span class='date-suffix'>rd</span>, <span class='date-year'>2015</span></span> <span class='time'>12:06 pm</span></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/css/'>css</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://lofo-blog.github.io/blog/3d-text-effect/" data-via="" data-counturl="http://lofo-blog.github.io/blog/3d-text-effect/" >Tweet</a>
+  <div class="bshare-custom"><a title="分享到QQ空间" class="bshare-qzone"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到人人网" class="bshare-renren"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="分享到网易微博" class="bshare-neteasemb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a><span class="BSHARE_COUNT bshare-share-count">0</span></div><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=2&amp;lang=zh"></script><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/awesome-social-icon-hover-effect/" title="Previous Post: Awesome Social Icon Hover Effect">&laquo; Awesome Social Icon Hover Effect</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/a-simple-php-contact-form/" title="Next Post: A Simple PHP Contact Form">A Simple PHP Contact Form &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>WHO AM I</h1>
+  <p><img style="width:150px; height:170px;" src="/images/head.jpg"></p>
+  <p>I am Linfeng Zhang who is a brand new front-end devloper</p>
+  <p>It's about turning IDEAS, PASSION, and A LOT OF COFFEE into a solution</p>
+  <p>Being creative and making things keeps me happy</p>
+  <p><img style="width:50px; height:50px;" src="/images/emailme.png"/>&nbsp;&nbsp;<img style="width:50px; height:50px;" src="/images/code.png"/>&nbsp;&nbsp;<img style="width:50px; height:50px;" src="/images/boy.png"/>&nbsp;&nbsp;<img style="width:50px; height:50px;" src="/images/cs.png"/>&nbsp;&nbsp;<img style="width:50px; height:50px;" src="/images/code1.png"/>&nbsp;&nbsp;<img style="width:50px; height:50px;" src="/images/code2.png"/>&nbsp;&nbsp;<img style="width:50px; height:50px;" src="/images/code3.png"/>&nbsp;&nbsp;<img style="width:50px; height:50px;" src="/images/code4.png"/></p>
+</section><section>
+  <h1>Categories</h1>
+  <ul id="CATEGORIES">
+    <li class='category'><a href='/blog/categories/css/'>css (2)</a></li>
+<li class='category'><a href='/blog/categories/php/'>php (1)</a></li>
+
+  </ul>
+</section><section>
+  <h1>RECENT POSTS</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/a-simple-php-contact-form/">A Simple PHP Contact Form</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/3d-text-effect/">3D Text Effect</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/awesome-social-icon-hover-effect/">Awesome Social Icon Hover Effect</a>
+      </li>
+    
+  </ul>
+</section>
+<div id="RecentComments">
+ <h4>RECENT COMMENTS</h4>
+ <script type="text/javascript" src="http://lzhan111.disqus.com/recent_comments_widget.js?num_items=5&hide_mods=0&hide_avatars=0&avatar_size=32&excerpt_length=100"></script>
+</div><section>
+  <h1>LINK</h1>
+  <ul>
+    <li>
+      <a href="http://www.lofoz.com/">L.O.F.O.Z</a>
+    </li>
+  </ul>
+</section>
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2015 - Linfeng Zhang -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'lzhan111';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://lofo-blog.github.io/blog/3d-text-effect/';
+        var disqus_url = 'http://lofo-blog.github.io/blog/3d-text-effect/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

@@ -4,7 +4,7 @@
   <title><![CDATA[L.O.F.O]]></title>
   <link href="http://lofo-blog.github.io/atom.xml" rel="self"/>
   <link href="http://lofo-blog.github.io/"/>
-  <updated>2015-06-03T12:04:58-05:00</updated>
+  <updated>2015-06-03T12:09:29-05:00</updated>
   <id>http://lofo-blog.github.io/</id>
   <author>
     <name><![CDATA[Linfeng Zhang]]></name>
@@ -12,6 +12,232 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[A Simple PHP Contact Form]]></title>
+    <link href="http://lofo-blog.github.io/blog/a-simple-php-contact-form/"/>
+    <updated>2015-06-03T12:08:07-05:00</updated>
+    <id>http://lofo-blog.github.io/blog/a-simple-php-contact-form</id>
+    <content type="html"><![CDATA[<p>When you need user to send feedback to your email, you can use contact form. In this tutorial you&rsquo;ll learn how to create contact form with php script.</p>
+
+<h4>Overview</h4>
+
+<p>In this tutorial, create 2 files<br>
+1. contact.php <br>
+2. send_contact.php <br></p>
+
+<p>Steps<br>
+1. Create file contact.php.<br>
+2. Create file send_contact.php.<br></p>
+
+<h4>Step1: Create File Contact.php</h4>
+
+<p><img src="http://lofo-blog.github.io/images/contact_form.gif"/></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;table width="400" border="0" align="center" cellpadding="3" cellspacing="1"&gt;
+</span><span class='line'>&lt;tr&gt;
+</span><span class='line'>&lt;td&gt;&lt;strong&gt;Contact Form &lt;/strong&gt;&lt;/td&gt;
+</span><span class='line'>&lt;/tr&gt;
+</span><span class='line'>&lt;/table&gt;
+</span><span class='line'>&lt;table width="400" border="0" align="center" cellpadding="0" cellspacing="1"&gt;
+</span><span class='line'>&lt;tr&gt;
+</span><span class='line'>&lt;td&gt;&lt;form name="form1" method="post" action="send_contact.php"&gt;
+</span><span class='line'>&lt;table width="100%" border="0" cellspacing="1" cellpadding="3"&gt;
+</span><span class='line'>&lt;tr&gt;
+</span><span class='line'>&lt;td width="16%"&gt;Subject&lt;/td&gt;
+</span><span class='line'>&lt;td width="2%"&gt;:&lt;/td&gt;
+</span><span class='line'>&lt;td width="82%"&gt;&lt;input name="subject" type="text" id="subject" size="50"&gt;&lt;/td&gt;
+</span><span class='line'>&lt;/tr&gt;
+</span><span class='line'>&lt;tr&gt;
+</span><span class='line'>&lt;td&gt;Detail&lt;/td&gt;
+</span><span class='line'>&lt;td&gt;:&lt;/td&gt;
+</span><span class='line'>&lt;td&gt;&lt;textarea name="detail" cols="50" rows="4" id="detail"&gt;&lt;/textarea&gt;&lt;/td&gt;
+</span><span class='line'>&lt;/tr&gt;
+</span><span class='line'>&lt;tr&gt;
+</span><span class='line'>&lt;td&gt;Name&lt;/td&gt;
+</span><span class='line'>&lt;td&gt;:&lt;/td&gt;
+</span><span class='line'>&lt;td&gt;&lt;input name="name" type="text" id="name" size="50"&gt;&lt;/td&gt;
+</span><span class='line'>&lt;/tr&gt;
+</span><span class='line'>&lt;tr&gt;
+</span><span class='line'>&lt;td&gt;Email&lt;/td&gt;
+</span><span class='line'>&lt;td&gt;:&lt;/td&gt;
+</span><span class='line'>&lt;td&gt;&lt;input name="customer_mail" type="text" id="customer_mail" size="50"&gt;&lt;/td&gt;
+</span><span class='line'>&lt;/tr&gt;
+</span><span class='line'>&lt;tr&gt;
+</span><span class='line'>&lt;td&gt;&nbsp;&lt;/td&gt;
+</span><span class='line'>&lt;td&gt;&nbsp;&lt;/td&gt;
+</span><span class='line'>&lt;td&gt;&lt;input type="submit" name="Submit" value="Submit"&gt; &lt;input type="reset" name="Submit2" value="Reset"&gt;&lt;/td&gt;
+</span><span class='line'>&lt;/tr&gt;
+</span><span class='line'>&lt;/table&gt;
+</span><span class='line'>&lt;/form&gt;
+</span><span class='line'>&lt;/td&gt;
+</span><span class='line'>&lt;/tr&gt;
+</span><span class='line'>&lt;/table&gt;</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>Step1: Create File Send_Contact.php</h4>
+
+<p><img src="http://lofo-blog.github.io/images/contact_form_view.gif"/></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;?php
+</span><span class='line'>
+</span><span class='line'>// Contact subject
+</span><span class='line'>$subject ="$subject"; 
+</span><span class='line'>
+</span><span class='line'>// Details
+</span><span class='line'>$message="$detail";
+</span><span class='line'>
+</span><span class='line'>// Mail of sender
+</span><span class='line'>$mail_from="$customer_mail"; 
+</span><span class='line'>
+</span><span class='line'>// From 
+</span><span class='line'>$header="from: $name &lt;$mail_from&gt;";
+</span><span class='line'>
+</span><span class='line'>// Enter your email address
+</span><span class='line'>$to ='someone@somewhere.com';
+</span><span class='line'>$send_contact=mail($to,$subject,$message,$header);
+</span><span class='line'>
+</span><span class='line'>// Check, if message sent to your email 
+</span><span class='line'>// display message "We've recived your information"
+</span><span class='line'>if($send_contact){
+</span><span class='line'>echo "We've recived your contact information";
+</span><span class='line'>}
+</span><span class='line'>else {
+</span><span class='line'>echo "ERROR";
+</span><span class='line'>}
+</span><span class='line'>?&gt;
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[3D Text Effect]]></title>
+    <link href="http://lofo-blog.github.io/blog/3d-text-effect/"/>
+    <updated>2015-06-03T12:06:41-05:00</updated>
+    <id>http://lofo-blog.github.io/blog/3d-text-effect</id>
+    <content type="html"><![CDATA[<p>Use multiple text-shadows to create 3D text on any HTML element.No extra HTML, no extra headaches, just awesomesauce.</p>
+
+<h4>Works in the latest builds of Safari, Chrome, Firefox, and Opera.</h4>
+
+<!--more-->
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>h1 {
+</span><span class='line'>  text-shadow: 0 1px 0 #ccc,
+</span><span class='line'>               0 2px 0 #c9c9c9,
+</span><span class='line'>               0 3px 0 #bbb,
+</span><span class='line'>               0 4px 0 #b9b9b9,
+</span><span class='line'>               0 5px 0 #aaa,
+</span><span class='line'>               0 6px 1px rgba(0,0,0,.1),
+</span><span class='line'>               0 0 5px rgba(0,0,0,.1),
+</span><span class='line'>               0 1px 3px rgba(0,0,0,.3),
+</span><span class='line'>               0 3px 5px rgba(0,0,0,.2),
+</span><span class='line'>               0 5px 10px rgba(0,0,0,.25),
+</span><span class='line'>               0 10px 10px rgba(0,0,0,.2),
+</span><span class='line'>               0 20px 20px rgba(0,0,0,.15);
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Check the effect blow:</p>
+
+<p><img src="http://lofo-blog.github.io/images/3d.jpg"/></p>
+
+<p><a style="background-color:#44c767;
+     -moz-border-radius:28px;
+     -webkit-border-radius:28px;
+     border-radius:28px;
+     border:1px solid #18ab29;
+     display:inline-block;
+     cursor:pointer;
+     color:#ffffff;
+     font-family:Arial;
+     font-size:17px;
+     padding:16px 31px;
+     text-decoration:none;
+     text-shadow:0px 1px 0px #2f6627;"href="http://markdotto.com/playground/3d-text/" class="myButton">DOMO</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Awesome Social Icon Hover Effect]]></title>

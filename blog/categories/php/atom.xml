@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Php | L.O.F.O]]></title>
+  <link href="http://lofo-blog.github.io/blog/categories/php/atom.xml" rel="self"/>
+  <link href="http://lofo-blog.github.io/"/>
+  <updated>2015-06-03T12:09:29-05:00</updated>
+  <id>http://lofo-blog.github.io/</id>
+  <author>
+    <name><![CDATA[Linfeng Zhang]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[A Simple PHP Contact Form]]></title>
+    <link href="http://lofo-blog.github.io/blog/a-simple-php-contact-form/"/>
+    <updated>2015-06-03T12:08:07-05:00</updated>
+    <id>http://lofo-blog.github.io/blog/a-simple-php-contact-form</id>
+    <content type="html"><![CDATA[<p>When you need user to send feedback to your email, you can use contact form. In this tutorial you&rsquo;ll learn how to create contact form with php script.</p>
+
+<h4>Overview</h4>
+
+<p>In this tutorial, create 2 files<br>
+1. contact.php <br>
+2. send_contact.php <br></p>
+
+<p>Steps<br>
+1. Create file contact.php.<br>
+2. Create file send_contact.php.<br></p>
+
+<h4>Step1: Create File Contact.php</h4>
+
+<p><img src="http://lofo-blog.github.io/images/contact_form.gif"/></p>
+
+<p>```</p>
+
+<table width="400" border="0" align="center" cellpadding="3" cellspacing="1">
+<tr>
+<td><strong>Contact Form </strong></td>
+</tr>
+</table>
+
+
+<table width="400" border="0" align="center" cellpadding="0" cellspacing="1">
+<tr>
+<td><form name="form1" method="post" action="send_contact.php">
+<table width="100%" border="0" cellspacing="1" cellpadding="3">
+<tr>
+<td width="16%">Subject</td>
+<td width="2%">:</td>
+<td width="82%"><input name="subject" type="text" id="subject" size="50"></td>
+</tr>
+<tr>
+<td>Detail</td>
+<td>:</td>
+<td><textarea name="detail" cols="50" rows="4" id="detail"></textarea></td>
+</tr>
+<tr>
+<td>Name</td>
+<td>:</td>
+<td><input name="name" type="text" id="name" size="50"></td>
+</tr>
+<tr>
+<td>Email</td>
+<td>:</td>
+<td><input name="customer_mail" type="text" id="customer_mail" size="50"></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><input type="submit" name="Submit" value="Submit"> <input type="reset" name="Submit2" value="Reset"></td>
+</tr>
+</table>
+</form>
+</td>
+</tr>
+</table>
+
+
+<pre><code>
+####Step1: Create File Send_Contact.php
+
+&lt;img src="http://lofo-blog.github.io/images/contact_form_view.gif"/&gt;
+</code></pre>
+
+<p>&lt;?php</p>
+
+<p>// Contact subject
+$subject =&ldquo;$subject&rdquo;;</p>
+
+<p>// Details
+$message=&ldquo;$detail&rdquo;;</p>
+
+<p>// Mail of sender
+$mail_from=&ldquo;$customer_mail&rdquo;;</p>
+
+<p>// From
+$header=&ldquo;from: $name &lt;$mail_from>&rdquo;;</p>
+
+<p>// Enter your email address
+$to =&lsquo;<a href="&#x6d;&#x61;&#x69;&#108;&#x74;&#x6f;&#x3a;&#115;&#x6f;&#x6d;&#101;&#x6f;&#110;&#101;&#x40;&#115;&#111;&#109;&#101;&#x77;&#104;&#101;&#114;&#x65;&#x2e;&#x63;&#x6f;&#109;">&#x73;&#111;&#109;&#x65;&#x6f;&#x6e;&#x65;&#64;&#115;&#111;&#109;&#101;&#x77;&#104;&#x65;&#x72;&#101;&#x2e;&#x63;&#x6f;&#x6d;</a>&rsquo;;
+$send_contact=mail($to,$subject,$message,$header);</p>
+
+<p>// Check, if message sent to your email
+// display message &ldquo;We&rsquo;ve recived your information&rdquo;
+if($send_contact){
+echo &ldquo;We&rsquo;ve recived your contact information&rdquo;;
+}
+else {
+echo &ldquo;ERROR&rdquo;;
+}
+?></p>
+
+<p>```</p>
+]]></content>
+  </entry>
+  
+</feed>
