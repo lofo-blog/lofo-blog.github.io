@@ -1,2 +1,53 @@
 // This File is imported last, and will override other styles in the cascade
 // Add styles here to make changes without digging in too much
+
+html {
+	background:#ffffff;
+}
+html {
+	body > header {
+    background: #475a85;
+    padding: 1.6em 0 1em 0;
+  }
+}
+
+body > div {
+	background-image: none;
+}
+
+body > nav {
+	ul.main-navigation {
+	padding-left: 3px;
+	}
+	ul.subscription {
+	//display: none;
+	}
+	a {
+	 &:hover {
+      color: hsl(209.01, 86.94%, 50.04%);
+    }
+    i {
+      color: hsl(209.01, 86.94%, 50.04%);
+    }
+  }
+}
+
+@media only screen and (min-width: 1040px) {
+  body > nav {
+    @include border-top-radius(.4em);
+  }
+
+  body > footer {
+    @include border-bottom-radius(.4em);
+  }
+}
+
+@media only screen and (min-width: 550px) {
+
+  body > header h1{
+      padding-left: 50px;
+  }
+
+  body > header h2 { padding-left: 50px; }
+}
+
