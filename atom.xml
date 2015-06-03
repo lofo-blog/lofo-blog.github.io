@@ -4,7 +4,7 @@
   <title><![CDATA[L.O.F.O]]></title>
   <link href="http://lofo-blog.github.io/atom.xml" rel="self"/>
   <link href="http://lofo-blog.github.io/"/>
-  <updated>2015-06-03T12:09:29-05:00</updated>
+  <updated>2015-06-03T12:11:32-05:00</updated>
   <id>http://lofo-blog.github.io/</id>
   <author>
     <name><![CDATA[Linfeng Zhang]]></name>
@@ -29,6 +29,9 @@
 <p>Steps<br>
 1. Create file contact.php.<br>
 2. Create file send_contact.php.<br></p>
+
+<!--more-->
+
 
 <h4>Step1: Create File Contact.php</h4>
 
