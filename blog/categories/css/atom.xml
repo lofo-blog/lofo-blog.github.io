@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Css | My Octopress Blog]]></title>
+  <link href="http://lofo-blog.github.io/blog/categories/css/atom.xml" rel="self"/>
+  <link href="http://lofo-blog.github.io/"/>
+  <updated>2015-06-03T11:22:25-05:00</updated>
+  <id>http://lofo-blog.github.io/</id>
+  <author>
+    <name><![CDATA[Your Name]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Awesome Social Icon Hover Effect]]></title>
+    <link href="http://lofo-blog.github.io/blog/2015/06/03/awesome-social-icon-hover-effect/"/>
+    <updated>2015-06-03T11:16:08-05:00</updated>
+    <id>http://lofo-blog.github.io/blog/2015/06/03/awesome-social-icon-hover-effect</id>
+    <content type="html"><![CDATA[<p>In this tutorial, we take a look at creating one beautiful, yet simple, icon hover effects using CSS3 transitions and transforms.</p>
+
+<p>Icons. They exist everywhere, in all our apps and websites these days, and they all perform important functions. They guide users into various interactions, or send them to external links such as various social media platforms. Icon sprites are commonplace and important from a development standpoint, and allow us to engage users a bit with hover classes. These hover classes have the potential to add a neat layer of interactivity and style to our apps/sites.<!--more--> In this tutorial, I&rsquo;m going to guide you through one icon hover states, each utilizing CSS3 transitions and transforms, engaging the end users a bit more, and possibly leading to higher click-through rates.</p>
+
+<h2>Making Up Icons?</h2>
+
+<p>So in general, our icons will follow this structure (HTML file):</p>
+
+<pre><code>&lt;link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"&gt;
+
+&lt;a class="social" href="https://webbb.be" target="_blank"&gt;
+     &lt;div class="front"&gt;
+        &lt;i class="fa fa-facebook"&gt;&lt;/i&gt;
+     &lt;/div&gt;
+     &lt;div class="back"&gt;
+        &lt;i class="fa fa-facebook"&gt;&lt;/i&gt;
+     &lt;/div&gt;
+&lt;/a&gt;
+
+&lt;a class="social social-twitter" href="https://webbb.be" target="_blank"&gt;
+     &lt;div class="front"&gt;
+        &lt;i class="fa fa-twitter"&gt;&lt;/i&gt;
+     &lt;/div&gt;
+     &lt;div class="back"&gt;
+        &lt;i class="fa fa-twitter"&gt;&lt;/i&gt;
+     &lt;/div&gt;
+&lt;/a&gt;
+
+&lt;a class="social social-github" href="https://webbb.be" target="_blank"&gt;
+     &lt;div class="front"&gt;
+        &lt;i class="fa fa-github"&gt;&lt;/i&gt;
+     &lt;/div&gt;
+     &lt;div class="back"&gt;
+        &lt;i class="fa fa-github"&gt;&lt;/i&gt;
+     &lt;/div&gt;
+&lt;/a&gt;
+
+&lt;a class="social social-pinterest" href="https://webbb.be" target="_blank"&gt;
+     &lt;div class="front"&gt;
+        &lt;i class="fa fa-pinterest"&gt;&lt;/i&gt;
+     &lt;/div&gt;
+     &lt;div class="back"&gt;
+        &lt;i class="fa fa-pinterest"&gt;&lt;/i&gt;
+     &lt;/div&gt;
+&lt;/a&gt;
+
+&lt;a class="social social-googleplus" href="https://webbb.be" target="_blank"&gt;
+     &lt;div class="front"&gt;
+        &lt;i class="fa fa-google-plus"&gt;&lt;/i&gt;
+     &lt;/div&gt;
+     &lt;div class="back"&gt;
+        &lt;i class="fa fa-google-plus"&gt;&lt;/i&gt;
+     &lt;/div&gt;
+&lt;/a&gt;
+
+&lt;a class="social social-skype" href="https://webbb.be" target="_blank"&gt;
+     &lt;div class="front"&gt;
+        &lt;i class="fa fa-skype"&gt;&lt;/i&gt;
+     &lt;/div&gt;
+     &lt;div class="back"&gt;
+        &lt;i class="fa fa-skype"&gt;&lt;/i&gt;
+     &lt;/div&gt;
+&lt;/a&gt;
+
+&lt;a class="social social-linkedin" href="https://webbb.be" target="_blank"&gt;
+     &lt;div class="front"&gt;
+        &lt;i class="fa fa-linkedin"&gt;&lt;/i&gt;
+     &lt;/div&gt;
+     &lt;div class="back"&gt;
+        &lt;i class="fa fa-linkedin"&gt;&lt;/i&gt;
+     &lt;/div&gt;
+&lt;/a&gt;
+
+&lt;a class="social social-skype" href="https://webbb.be" target="_blank"&gt;
+     &lt;div class="front"&gt;
+        &lt;i class="fa fa-skype"&gt;&lt;/i&gt;
+     &lt;/div&gt;
+     &lt;div class="back"&gt;
+        &lt;i class="fa fa-skype"&gt;&lt;/i&gt;
+     &lt;/div&gt;
+&lt;/a&gt;
+
+&lt;a class="social social-dribbble" href="https://webbb.be" target="_blank"&gt;
+     &lt;div class="front"&gt;
+        &lt;i class="fa fa-dribbble"&gt;&lt;/i&gt;
+     &lt;/div&gt;
+     &lt;div class="back"&gt;
+        &lt;i class="fa fa-dribbble"&gt;&lt;/i&gt;
+     &lt;/div&gt;
+&lt;/a&gt;
+</code></pre>
+
+<p>Now, let&rsquo;s dig into some CSS.</p>
+
+<pre><code>/**
+ * CSS3 social icon hover effect
+ * Read more on my blog: http://webbb.be/blog/
+ */
+
+body {
+    background: #f06;
+    background: linear-gradient(45deg, #f06, yellow);
+    min-height: 100%;
+}
+a,a:visited { color: #fff; }
+a:hover { color: #fff; }
+
+.social {
+    float: left;
+    margin: 2em 2em; width: 100px; height: 100px;   
+    display: block; text-align: center; line-height:103px; color: #fff;
+
+    position: relative;
+    transform:rotateY(0deg);
+    transition:transform .25s ease-out;
+    transform-style:preserve-3d;
+}
+.social &gt; div {
+    width: 100px; height: 100px; background: #000;
+    position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+}
+.social &gt;.front {
+    transform:translateZ(40px);
+}
+.social &gt;.back {
+    background: #3B5998; font-size: 3em;
+    transform:rotateY(-100deg) translateZ(40px);
+}
+
+/*  Social Media Colors 
+    Facebook #3B5998
+    Flickr #FE0883
+    Foursquare #8FD400
+    Google+ #C63D2D
+    Instagram #4E433C
+    Linkedin #4875B4
+    Tumblr #2B4964
+    Twitter #33CCFF
+    Vimeo #86B32D
+    Youtube #FF3333
+    Dribbble #ea4c89
+*/
+.social.social-twitter &gt; .back { background: #55ACEE; }
+.social.social-github &gt; .back { background: #f3f3f3; color: #000; }
+.social.social-pinterest &gt; .back { background: #e3262e; }
+.social.social-googleplus &gt; .back { background: #dd4B39; }
+.social.social-skype &gt; .back { background: #12A5F4; }
+.social.social-linkedin &gt; .back { background: #4875B4; }
+.social.social-dribbble &gt; .back { background: #ea4c89; }
+
+/* Hover */
+.social:hover {
+    transform: rotateY(100deg);
+}
+</code></pre>
+
+<p><a style="background-color:#44c767;
+    -moz-border-radius:28px;
+    -webkit-border-radius:28px;
+    border-radius:28px;
+    border:1px solid #18ab29;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:17px;
+    padding:16px 31px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #2f6627;"href="http://dabblet.com/gist/8255020" class="myButton">DOMO</a></p>
+]]></content>
+  </entry>
+  
+</feed>
